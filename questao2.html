@@ -8,11 +8,11 @@
 <body>
     
     <p>Calculadora</p>
-    <input type="text" id="n1"/><br><br/>
+    <input type="text" id="n1"/><br/><br/>
     <input type="text" id="n2"/><br/><br/>
 
 
-    <select id="select" name="select"><br/>
+    <select id="selecao"><br/>
        <option value="operadores">Operador</option>
         <option value="somar">+</option>
         <option value="subtrair">-</option>
@@ -20,18 +20,23 @@
         <option value="dividir">/</option>
     </select>
 
-    <button onclick="igualdade()">=</button>
+    <button onclick="calc()">=</button>
     <input type="text" id="resultado"/>
     
     <script>
-       function cal(){
-           var n1 = document.getElementById(n1).values;
+       function calc(resultado){
+            var n1 = document.getElementById(n1).values;
             var n2 = document.getElementById(n2).values;
-            var result = document.getElementById(select).values;
+            var result = document.getElementById(selecao).values;
             
-            //Operação de adição
             if (result === '+'){
                 document.getElementById(resultado).values = n1+n2;
+            }else if (result === '-'){
+                document.getElementById(resultado).values = n1-n2;
+            }else if (result === 'x'){
+                document.getElementById(resultado).values = n1*n2;
+            }else if (result === '/'){
+                document.getElementById(resultado).values = n1/n2;
             }
         }
     </script>
