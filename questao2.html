@@ -5,41 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
-    <p>Calculadora</p>
-    <input type="text" id="n1"/><br/><br/>
-    <input type="text" id="n2"/><br/><br/>
+    <body>
+
+        <p>Calculadora</p>
+        <input type="text" id="n1"/><br/><br/>
+        <input type="text" id="n2"/><br/><br/>
 
 
-    <select id="selecao"><br/>
-       <option value="operadores">Operador</option>
-        <option value="somar">+</option>
-        <option value="subtrair">-</option>
-        <option value="multiplicar">x</option>
-        <option value="dividir">/</option>
-    </select>
+        <select id="selecao"><br/>
+           <option value="somar">+</option>
+           <option value="subtrair">-</option>
+           <option value="multiplicar">x</option>
+           <option value="dividir">/</option>
+        </select>
 
-    <button onclick="calc()">=</button>
-    <input type="text" id="resultado"/>
-    
-    <script>
-       function calc(resultado){
-            var n1 = document.getElementById(n1).values;
-            var n2 = document.getElementById(n2).values;
-            var result = document.getElementById(selecao).values;
-            
-            if (result === '+'){
-                document.getElementById(resultado).values = n1+n2;
-            }else if (result === '-'){
-                document.getElementById(resultado).values = n1-n2;
-            }else if (result === 'x'){
-                document.getElementById(resultado).values = n1*n2;
-            }else if (result === '/'){
-                document.getElementById(resultado).values = n1/n2;
+        <button onclick="calc();">=</button><br/><br/>
+        <input type="text" id="resultado"/>
+
+        <script>
+
+           function calc(){
+                let n1 = document.getElementById('n1').values;
+                let n2 = document.getElementById('n2').values;
+                let sel = document.getElementById('selecao').values;
+
+                if (sel === '+'){
+                    document.getElementById('resultado').values = n1+n2;
+                }if (sel === '-'){
+                    document.getElementById('resultado').values = n1-n2;
+                }if (sel === 'x'){
+                    document.getElementById('resultado').values = n1*n2;
+                }if (sel === '/'){
+                    document.getElementById('resultado').values = n1/n2;
+                }
             }
-        }
-    </script>
+        </script>
 
-</body>
+    </body>
 </html>
