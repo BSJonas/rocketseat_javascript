@@ -8,7 +8,7 @@
 <body>
     <button id="btn" onclick="criaQuadro()">Cria Quadro</button>
     <div id="app">
-        <div id="box" class="box" style = "color: red"; width: 100px; heght: 100px ></div>
+        <div id="box" class="box"></div>
     </div>
     <script>
 
@@ -18,11 +18,22 @@
             box.style.width = '100px';
             box.style.height = '100px';
             box.style.margin = '5px';
-            box.style.backgroundColor = '#ff0000';
-
+            box.style.backgroundColor = '#ff0000'//getRandomColor();
+            box.onmouseover = () =>  box.style.backgroundColor = getRandomColor()
             document.body.appendChild(box);
 
         }
+
+        function getRandomColor() {
+ var letters = "0123456789ABCDEF";
+ var color = "#";
+ for (var i = 0; i < 6; i++) {
+ color += letters[Math.floor(Math.random() * 16)];
+ }
+ return color;
+}
+
+
        
     </script>
     
